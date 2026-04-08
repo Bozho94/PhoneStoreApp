@@ -1,0 +1,692 @@
+﻿[
+    {
+        "brand":  "Apple",
+        "model":  "iPhone 16",
+        "releaseYear":  2024,
+        "price":  899,
+        "description":  "Modern iPhone with bright OLED display, strong everyday cameras, and premium build quality.",
+        "stockQuantity":  14,
+        "sourcePage":  "https://www.apple.com/newsroom/2024/09/apple-introduces-iphone-16-and-iphone-16-plus/",
+        "images":  [
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/2024/09/apple-introduces-iphone-16-and-iphone-16-plus/tile/Apple-iPhone-16-lineup-240909-lp.jpg.og.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/2024/09/apple-introduces-iphone-16-and-iphone-16-plus/article/Apple-iPhone-16-hero-240909_inline.jpg.large.jpg",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/2024/09/apple-introduces-iphone-16-and-iphone-16-plus/article/Apple-iPhone-16-lineup-240909_big.jpg.large.jpg",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Apple",
+        "model":  "iPhone 16 Plus",
+        "releaseYear":  2024,
+        "price":  999,
+        "description":  "Large-screen iPhone for users who want longer battery life and a bigger display.",
+        "stockQuantity":  11,
+        "sourcePage":  "https://www.apple.com/newsroom/2024/09/apple-introduces-iphone-16-and-iphone-16-plus/",
+        "images":  [
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/2024/09/apple-introduces-iphone-16-and-iphone-16-plus/tile/Apple-iPhone-16-lineup-240909-lp.jpg.og.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/2024/09/apple-introduces-iphone-16-and-iphone-16-plus/article/Apple-iPhone-16-hero-240909_inline.jpg.large.jpg",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/2024/09/apple-introduces-iphone-16-and-iphone-16-plus/article/Apple-iPhone-16-lineup-240909_big.jpg.large.jpg",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Apple",
+        "model":  "iPhone 16 Pro",
+        "releaseYear":  2024,
+        "price":  1099,
+        "description":  "Pro-grade iPhone with premium materials, powerful cameras, and high-end performance.",
+        "stockQuantity":  8,
+        "sourcePage":  "https://www.apple.com/newsroom/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/",
+        "images":  [
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/tile/Apple-iPhone-16-Pro-hero-240909-lp.jpg.og.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-hero-240909_inline.jpg.large.jpg",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-finish-lineup-240909_big.jpg.large.jpg",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Apple",
+        "model":  "iPhone 16 Pro Max",
+        "releaseYear":  2024,
+        "price":  1299,
+        "description":  "Largest 2024 iPhone with premium camera system, long battery life, and flagship performance.",
+        "stockQuantity":  6,
+        "sourcePage":  "https://www.apple.com/newsroom/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/",
+        "images":  [
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/tile/Apple-iPhone-16-Pro-hero-240909-lp.jpg.og.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-hero-240909_inline.jpg.large.jpg",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-finish-lineup-240909_big.jpg.large.jpg",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Apple",
+        "model":  "iPhone 15",
+        "releaseYear":  2023,
+        "price":  799,
+        "description":  "Balanced iPhone option with strong cameras, Dynamic Island, and solid battery life.",
+        "stockQuantity":  15,
+        "sourcePage":  "https://www.apple.com/newsroom/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/",
+        "images":  [
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/tile/Apple-iPhone-15-lineup-hero-230912.jpg.og.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-hero-230912_inline.jpg.large.jpg",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-color-lineup-230912_big.jpg.large.jpg",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Apple",
+        "model":  "iPhone 15 Plus",
+        "releaseYear":  2023,
+        "price":  899,
+        "description":  "Big-screen version of iPhone 15 with longer battery life and comfortable everyday performance.",
+        "stockQuantity":  9,
+        "sourcePage":  "https://www.apple.com/newsroom/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/",
+        "images":  [
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/tile/Apple-iPhone-15-lineup-hero-230912.jpg.og.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-hero-230912_inline.jpg.large.jpg",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/2023/09/apple-debuts-iphone-15-and-iphone-15-plus/article/Apple-iPhone-15-lineup-color-lineup-230912_big.jpg.large.jpg",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Apple",
+        "model":  "iPhone 15 Pro",
+        "releaseYear":  2023,
+        "price":  999,
+        "description":  "Lightweight titanium iPhone with pro camera features and premium finish.",
+        "stockQuantity":  7,
+        "sourcePage":  "https://www.apple.com/newsroom/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/",
+        "images":  [
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/tile/Apple-iPhone-15-Pro-lineup-hero-230912.jpg.og.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/article/Apple-iPhone-15-Pro-lineup-hero-230912_Full-Bleed-Image.jpg.large.jpg",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/article/Apple-iPhone-15-Pro-lineup-color-lineup-230912_big.jpg.large.jpg",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Apple",
+        "model":  "iPhone 15 Pro Max",
+        "releaseYear":  2023,
+        "price":  1199,
+        "description":  "Top-tier 2023 iPhone with advanced zoom camera and large premium display.",
+        "stockQuantity":  5,
+        "sourcePage":  "https://www.apple.com/newsroom/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/",
+        "images":  [
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/tile/Apple-iPhone-15-Pro-lineup-hero-230912.jpg.og.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/article/Apple-iPhone-15-Pro-lineup-hero-230912_Full-Bleed-Image.jpg.large.jpg",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/article/Apple-iPhone-15-Pro-lineup-color-lineup-230912_big.jpg.large.jpg",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Apple",
+        "model":  "iPhone 14",
+        "releaseYear":  2022,
+        "price":  699,
+        "description":  "Reliable mainstream iPhone with solid camera quality and strong software support.",
+        "stockQuantity":  13,
+        "sourcePage":  "https://www.apple.com/newsroom/2022/09/apple-introduces-iphone-14-and-iphone-14-plus/",
+        "images":  [
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-iPhone-14-Plus-hero-220907.jpg.og.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-iPhone-14-Plus-hero-220907_Full-Bleed-Image.jpg.large.jpg",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-iPhone-14-Plus-5up-hero-220907_Full-Bleed-Image.jpg.large.jpg",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Apple",
+        "model":  "iPhone 14 Plus",
+        "releaseYear":  2022,
+        "price":  799,
+        "description":  "Large iPhone with familiar design, strong battery life, and smooth daily performance.",
+        "stockQuantity":  10,
+        "sourcePage":  "https://www.apple.com/newsroom/2022/09/apple-introduces-iphone-14-and-iphone-14-plus/",
+        "images":  [
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-iPhone-14-Plus-hero-220907.jpg.og.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-iPhone-14-Plus-hero-220907_Full-Bleed-Image.jpg.large.jpg",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-iPhone-14-Plus-5up-hero-220907_Full-Bleed-Image.jpg.large.jpg",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Apple",
+        "model":  "iPhone 14 Pro",
+        "releaseYear":  2022,
+        "price":  899,
+        "description":  "Premium 2022 iPhone with ProMotion display and improved camera hardware.",
+        "stockQuantity":  6,
+        "sourcePage":  "https://www.apple.com/newsroom/2022/09/apple-debuts-iphone-14-pro-and-iphone-14-pro-max/",
+        "images":  [
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-hero-220907.jpg.og.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-hero-220907_Full-Bleed-Image.jpg.large.jpg",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-space-black-220907_inline.jpg.large.jpg",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Apple",
+        "model":  "iPhone 14 Pro Max",
+        "releaseYear":  2022,
+        "price":  999,
+        "description":  "Large premium iPhone with flagship display, great battery life, and pro cameras.",
+        "stockQuantity":  4,
+        "sourcePage":  "https://www.apple.com/newsroom/2022/09/apple-debuts-iphone-14-pro-and-iphone-14-pro-max/",
+        "images":  [
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-hero-220907.jpg.og.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-hero-220907_Full-Bleed-Image.jpg.large.jpg",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://www.apple.com/newsroom/images/product/iphone/standard/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-space-black-220907_inline.jpg.large.jpg",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Samsung",
+        "model":  "Galaxy S25",
+        "releaseYear":  2025,
+        "price":  799,
+        "description":  "Compact Galaxy flagship with AMOLED display, Galaxy AI features, and versatile daily performance.",
+        "stockQuantity":  16,
+        "sourcePage":  "https://news.samsung.com/global/samsung-galaxy-s25-series-sets-the-standard-of-ai-phone-as-a-true-ai-companion",
+        "images":  [
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2025/01/Samsung-Mobile-Galaxy-Unpacked-2025-Galaxy-S25-Series-A-True-AI-Companion_main1.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2025/01/Samsung-Mobile-Galaxy-Unpacked-2025-Galaxy-S25-Series-A-True-AI-Companion_main2.gif",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2025/01/Samsung-Mobile-Galaxy-Unpacked-2025-Galaxy-S25-Series-A-True-AI-Companion_main3.gif",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Samsung",
+        "model":  "Galaxy S25+",
+        "releaseYear":  2025,
+        "price":  999,
+        "description":  "Larger Galaxy S25 model with a bigger display and battery for power users.",
+        "stockQuantity":  10,
+        "sourcePage":  "https://news.samsung.com/global/samsung-galaxy-s25-series-sets-the-standard-of-ai-phone-as-a-true-ai-companion",
+        "images":  [
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2025/01/Samsung-Mobile-Galaxy-Unpacked-2025-Galaxy-S25-Series-A-True-AI-Companion_main1.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2025/01/Samsung-Mobile-Galaxy-Unpacked-2025-Galaxy-S25-Series-A-True-AI-Companion_main2.gif",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2025/01/Samsung-Mobile-Galaxy-Unpacked-2025-Galaxy-S25-Series-A-True-AI-Companion_main3.gif",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Samsung",
+        "model":  "Galaxy S25 Ultra",
+        "releaseYear":  2025,
+        "price":  1299,
+        "description":  "Top Samsung flagship with premium camera system, large AMOLED screen, and Ultra features.",
+        "stockQuantity":  5,
+        "sourcePage":  "https://news.samsung.com/global/samsung-galaxy-s25-series-sets-the-standard-of-ai-phone-as-a-true-ai-companion",
+        "images":  [
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2025/01/Samsung-Mobile-Galaxy-Unpacked-2025-Galaxy-S25-Series-A-True-AI-Companion_main1.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2025/01/Samsung-Mobile-Galaxy-Unpacked-2025-Galaxy-S25-Series-A-True-AI-Companion_main2.gif",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2025/01/Samsung-Mobile-Galaxy-Unpacked-2025-Galaxy-S25-Series-A-True-AI-Companion_main3.gif",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Samsung",
+        "model":  "Galaxy S24",
+        "releaseYear":  2024,
+        "price":  699,
+        "description":  "Premium Galaxy phone with vivid display, strong camera system, and current Samsung software features.",
+        "stockQuantity":  18,
+        "sourcePage":  "https://news.samsung.com/global/enter-the-new-era-of-mobile-ai-with-samsung-galaxy-s24-series",
+        "images":  [
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2024/01/Galaxy-S24-Series_main1.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2024/01/Galaxy-S24-Series_main2.jpg",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2024/01/Galaxy-S24-Series_main3.jpg",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Samsung",
+        "model":  "Galaxy S24+",
+        "releaseYear":  2024,
+        "price":  899,
+        "description":  "Mid-size flagship Galaxy with bigger screen and battery than the standard S24.",
+        "stockQuantity":  12,
+        "sourcePage":  "https://news.samsung.com/global/enter-the-new-era-of-mobile-ai-with-samsung-galaxy-s24-series",
+        "images":  [
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2024/01/Galaxy-S24-Series_main1.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2024/01/Galaxy-S24-Series_main2.jpg",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2024/01/Galaxy-S24-Series_main3.jpg",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Samsung",
+        "model":  "Galaxy S24 Ultra",
+        "releaseYear":  2024,
+        "price":  1199,
+        "description":  "Flagship Samsung phone with advanced zoom camera, premium build, and large display.",
+        "stockQuantity":  7,
+        "sourcePage":  "https://news.samsung.com/global/enter-the-new-era-of-mobile-ai-with-samsung-galaxy-s24-series",
+        "images":  [
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2024/01/Galaxy-S24-Series_main1.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2024/01/Galaxy-S24-Series_main2.jpg",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2024/01/Galaxy-S24-Series_main3.jpg",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Samsung",
+        "model":  "Galaxy S24 FE",
+        "releaseYear":  2024,
+        "price":  649,
+        "description":  "Fan Edition Galaxy with strong everyday value, premium feel, and AI-enhanced camera features.",
+        "stockQuantity":  14,
+        "sourcePage":  "https://news.samsung.com/global/galaxy-s24-series-expands-with-s24-fe-a-premium-experience-that-makes-full-galaxy-ai-capabilities-attainable-for-more-users",
+        "images":  [
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2024/09/Samsung-Mobile-S24-FE-Galaxy-AI-October-3_main1.gif",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2024/09/Samsung-Mobile-S24-FE-Galaxy-AI-October-3_main2.jpg",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2024/09/Samsung-Mobile-S24-FE-Galaxy-AI-October-3_main3_Final.gif",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Samsung",
+        "model":  "Galaxy Z Flip6",
+        "releaseYear":  2024,
+        "price":  1099,
+        "description":  "Modern foldable flip phone with compact form factor and flexible cover-screen experience.",
+        "stockQuantity":  6,
+        "sourcePage":  "https://news.samsung.com/global/samsung-galaxy-z-fold-6-and-z-flip-6-elevate-galaxy-ai-to-new-heights",
+        "images":  [
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2024/07/Samsung-Mobile-Galaxy-Unpacked-2024-Galaxy-Z-Fold6-and-Z-Flip6-Official-press-release_Main1.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2024/07/Samsung-Mobile-Galaxy-Unpacked-2024-Galaxy-Z-Fold6-and-Z-Flip6-Official-press-release_Main2.jpg",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2024/07/Samsung-Mobile-Galaxy-Unpacked-2024-Galaxy-Z-Fold6-and-Z-Flip6-Official-press-release_Main3.jpg",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Samsung",
+        "model":  "Galaxy Z Fold6",
+        "releaseYear":  2024,
+        "price":  1899,
+        "description":  "Book-style foldable Galaxy built for productivity, multitasking, and large-screen use.",
+        "stockQuantity":  3,
+        "sourcePage":  "https://news.samsung.com/global/samsung-galaxy-z-fold-6-and-z-flip-6-elevate-galaxy-ai-to-new-heights",
+        "images":  [
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2024/07/Samsung-Mobile-Galaxy-Unpacked-2024-Galaxy-Z-Fold6-and-Z-Flip6-Official-press-release_Main1.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2024/07/Samsung-Mobile-Galaxy-Unpacked-2024-Galaxy-Z-Fold6-and-Z-Flip6-Official-press-release_Main2.jpg",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2024/07/Samsung-Mobile-Galaxy-Unpacked-2024-Galaxy-Z-Fold6-and-Z-Flip6-Official-press-release_Main3.jpg",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Samsung",
+        "model":  "Galaxy Z Flip5",
+        "releaseYear":  2023,
+        "price":  899,
+        "description":  "Foldable flip Galaxy with stylish compact design and practical outer display.",
+        "stockQuantity":  7,
+        "sourcePage":  "https://news.samsung.com/global/samsung-galaxy-z-flip5-and-galaxy-z-fold5-delivering-flexibility-and-versatility-without-compromise",
+        "images":  [
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2023/07/UNPK_B5Q5-PR_main1.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2023/07/UNPK_B5Q5-PR_main2.jpg",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2023/07/UNPK_B5Q5-PR_main3.jpg",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Samsung",
+        "model":  "Galaxy Z Fold5",
+        "releaseYear":  2023,
+        "price":  1499,
+        "description":  "Premium foldable Samsung phone designed for multitasking and immersive media use.",
+        "stockQuantity":  4,
+        "sourcePage":  "https://news.samsung.com/global/samsung-galaxy-z-flip5-and-galaxy-z-fold5-delivering-flexibility-and-versatility-without-compromise",
+        "images":  [
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2023/07/UNPK_B5Q5-PR_main1.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2023/07/UNPK_B5Q5-PR_main2.jpg",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://img.global.news.samsung.com/global/wp-content/uploads/2023/07/UNPK_B5Q5-PR_main3.jpg",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Google",
+        "model":  "Pixel 9",
+        "releaseYear":  2024,
+        "price":  799,
+        "description":  "Google phone with clean Android experience, strong cameras, and helpful AI features.",
+        "stockQuantity":  12,
+        "sourcePage":  "https://blog.google/products-and-platforms/devices/pixel/google-pixel-9-pro-xl/",
+        "images":  [
+                       {
+                           "imageUrl":  "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/P9P9PThumbnail_16x9_Opt2_2.width-1300.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/compare-sizes-desktop-caimanporc.width-1000.format-webp_v7hDHax.webp",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/image_P9_2024Q2_Peony_LT_T-Shot_.width-1000.format-webp_SVFKGQ9.webp",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Google",
+        "model":  "Pixel 9 Pro",
+        "releaseYear":  2024,
+        "price":  999,
+        "description":  "Premium Pixel with advanced camera system, polished design, and Google AI features.",
+        "stockQuantity":  7,
+        "sourcePage":  "https://blog.google/products-and-platforms/devices/pixel/google-pixel-9-pro-xl/",
+        "images":  [
+                       {
+                           "imageUrl":  "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/P9P9PThumbnail_16x9_Opt2_2.width-1300.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/compare-sizes-desktop-caimanporc.width-1000.format-webp_v7hDHax.webp",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/image_P9_2024Q2_Peony_LT_T-Shot_.width-1000.format-webp_SVFKGQ9.webp",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Google",
+        "model":  "Pixel 9 Pro XL",
+        "releaseYear":  2024,
+        "price":  1099,
+        "description":  "Large-screen Pixel flagship with strong photography and premium hardware.",
+        "stockQuantity":  5,
+        "sourcePage":  "https://blog.google/products-and-platforms/devices/pixel/google-pixel-9-pro-xl/",
+        "images":  [
+                       {
+                           "imageUrl":  "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/P9P9PThumbnail_16x9_Opt2_2.width-1300.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/compare-sizes-desktop-caimanporc.width-1000.format-webp_v7hDHax.webp",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/image_P9_2024Q2_Peony_LT_T-Shot_.width-1000.format-webp_SVFKGQ9.webp",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Google",
+        "model":  "Pixel 9 Pro Fold",
+        "releaseYear":  2024,
+        "price":  1799,
+        "description":  "Foldable Pixel with large inner screen, Google AI features, and flagship camera hardware.",
+        "stockQuantity":  3,
+        "sourcePage":  "https://blog.google/products-and-platforms/devices/pixel/google-pixel-9-pro-fold/",
+        "images":  [
+                       {
+                           "imageUrl":  "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/P9PFold_YT_Thumbnail_Opt1.width-1300.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/image3-18_resized.width-1000.format-webp.webp",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/image1-10_resize.width-1000.format-webp.webp",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Google",
+        "model":  "Pixel 8",
+        "releaseYear":  2023,
+        "price":  699,
+        "description":  "Well-rounded Pixel with clean software, strong photo quality, and compact form factor.",
+        "stockQuantity":  10,
+        "sourcePage":  "https://blog.google/products-and-platforms/devices/pixel/google-pixel-8-pro/",
+        "images":  [
+                       {
+                           "imageUrl":  "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Pixel_Portfolio_Bay_Hazel_vZb6KiW.width-1300.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/image_P8P_P8_Buds4_GW2_2023Q3_H2.width-1000.format-webp.webp",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Pixel_8_Pro_in_Bay.width-1000.format-webp.webp",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Google",
+        "model":  "Pixel 8 Pro",
+        "releaseYear":  2023,
+        "price":  999,
+        "description":  "Higher-end Pixel with premium camera features and top-tier Google software experience.",
+        "stockQuantity":  6,
+        "sourcePage":  "https://blog.google/products-and-platforms/devices/pixel/google-pixel-8-pro/",
+        "images":  [
+                       {
+                           "imageUrl":  "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Pixel_Portfolio_Bay_Hazel_vZb6KiW.width-1300.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/image_P8P_P8_Buds4_GW2_2023Q3_H2.width-1000.format-webp.webp",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Pixel_8_Pro_in_Bay.width-1000.format-webp.webp",
+                           "isMain":  false
+                       }
+                   ]
+    },
+    {
+        "brand":  "Google",
+        "model":  "Pixel 8a",
+        "releaseYear":  2024,
+        "price":  499,
+        "description":  "Value-focused Pixel with helpful AI features, solid cameras, and long software support.",
+        "stockQuantity":  17,
+        "sourcePage":  "https://blog.google/products-and-platforms/devices/pixel/pixel-8a-launch/",
+        "images":  [
+                       {
+                           "imageUrl":  "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/GooglePixel8a.width-1300.jpg",
+                           "isMain":  true
+                       },
+                       {
+                           "imageUrl":  "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AG_enUS_P8a_90x58_Matcha_1223_GG.width-1000.format-webp.webp",
+                           "isMain":  false
+                       },
+                       {
+                           "imageUrl":  "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Pixel8a_Aloe.width-1000.format-webp.webp",
+                           "isMain":  false
+                       }
+                   ]
+    }
+]

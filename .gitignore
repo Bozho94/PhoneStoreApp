@@ -1,0 +1,17 @@
+bin/
+obj/
+.vs/
+node_modules/
+.angular/
+dist/
+coverage/
+*.log
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+API/appsettings.Development.json
+API/appsettings.Local.json
+.env
+.env.*

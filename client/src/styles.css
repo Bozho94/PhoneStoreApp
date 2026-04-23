@@ -2,3 +2,14 @@
 @plugin "daisyui" {
     themes: all;
 }
+
+button:not(:disabled),
+a[href],
+[role="button"],
+summary {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}

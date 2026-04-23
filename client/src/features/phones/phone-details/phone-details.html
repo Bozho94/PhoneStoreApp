@@ -1,0 +1,129 @@
+@if (phone) {
+  <section class="min-h-screen bg-base-100 px-6 py-10">
+    <div class="mx-auto max-w-5xl">
+      <a
+        routerLink="/phones"
+        class="btn btn-sm mb-6 rounded-full border border-base-300 bg-base-100 px-5 font-medium shadow-sm hover:border-primary/40 hover:bg-base-200"
+      >
+        <span class="text-lg leading-none">&lt;</span>
+        <span>Back to phones</span>
+      </a>
+
+      <div class="rounded-4xl border border-base-200 bg-base-100 p-5 shadow-md shadow-base-300/40">
+        <figure class="rounded-3xl bg-base-200/60 p-3">
+          <img
+            [src]="selectedImageUrl"
+            [alt]="phone.brand + ' ' + phone.model"
+            class="h-136 w-full rounded-[1.25rem] object-contain"
+          />
+        </figure>
+
+        <div class="mt-4 grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-5">
+          @for (image of phone.images; track image.id) {
+            <button
+              type="button"
+              class="rounded-2xl bg-base-100 p-2 shadow-sm ring-1 ring-base-300/70 transition hover:-translate-y-0.5 hover:ring-primary/40"
+              [class.ring-2]="image.imageUrl === selectedImageUrl"
+              [class.ring-primary]="image.imageUrl === selectedImageUrl"
+              (click)="selectImage(image.imageUrl)"
+            >
+              <img
+                [src]="image.imageUrl"
+                [alt]="phone.brand + ' ' + phone.model"
+                class="h-24 w-full rounded-xl object-contain"
+              />
+            </button>
+          }
+        </div>
+      </div>
+
+      <div
+        class="mt-8 rounded-4xl border border-base-200 bg-base-100 p-8 shadow-md shadow-base-300/30"
+      >
+        <p class="text-sm font-semibold uppercase tracking-[0.25em] text-primary">
+          {{ phone.brand }}
+        </p>
+
+        <h1 class="mt-4 text-4xl font-bold">
+          {{ phone.model }}
+        </h1>
+
+        <div class="mt-4 flex flex-wrap gap-3">
+          <span class="badge badge-outline">
+            {{ phone.releaseYear }}
+          </span>
+
+          @if (phone.stockQuantity > 0) {
+            <span class="badge badge-success badge-outline"> In stock </span>
+          } @else {
+            <span class="badge badge-error badge-outline"> Out of stock </span>
+          }
+        </div>
+
+        <div class="mt-6 text-3xl font-bold">${{ phone.price }}</div>
+
+        <div class="mt-4">
+          <div class="flex flex-wrap items-center gap-3">
+            <div class="flex items-center gap-0.5">
+              @for (star of stars; track star) {
+                <button
+                  type="button"
+                  class="rounded-full p-0.5 transition enabled:hover:scale-110 disabled:cursor-default"
+                  [disabled]="!isLoggedIn"
+                  [attr.aria-label]="'Rate ' + star + ' stars'"
+                  (click)="ratePhone(star)"
+                >
+                  @if (star <= phone.averageRating) {
+                    <svg viewBox="0 0 24 24" fill="currentColor" class="size-6 text-amber-400">
+                      <path
+                        fill-rule="evenodd"
+                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354l-4.627 2.825c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006Z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  } @else {
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      class="size-6 text-amber-400"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                      />
+                    </svg>
+                  }
+                </button>
+              }
+            </div>
+
+            <span class="text-sm text-base-content/70"> {{ phone.ratingsCount }} ratings </span>
+          </div>
+
+          @if (!isLoggedIn) {
+            <p class="mt-2 text-sm text-base-content/60">Log in to rate this phone.</p>
+          }
+        </div>
+
+        <p class="mt-4 leading-7 text-base-content/80">
+          {{ phone.description }}
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          @if (!isLoggedIn) {
+            <p class="mt-2 text-sm text-base-content/60">Log in to buy this phone.</p>
+          } @else {
+            <button class="btn btn-primary" (click)="addToCart()">Add to cart</button>
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+} @else {
+  <section class="min-h-screen bg-base-100 p-10">
+    <div class="loading loading-spinner loading-lg"></div>
+  </section>
+}

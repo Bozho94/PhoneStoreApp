@@ -1,7 +1,9 @@
 using System.Text;
 using API.Data;
 using API.Entities;
+using API.Interfaces;
 using API.Middleware;
+using API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -16,6 +18,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 });
 
 builder.Services.AddCors();
+builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<IPhoneService, PhoneService>();
 
 builder.Services.AddIdentityCore<AppUser>(options =>
 {

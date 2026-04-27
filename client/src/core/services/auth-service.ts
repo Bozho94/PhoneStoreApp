@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { tap } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { LoginType } from '../../types/LoginType';
@@ -11,6 +12,7 @@ import { UserType } from '../../types/UserType';
 })
 export class AuthService {
   private http = inject(HttpClient);
+  private router = inject(Router);
   private baseUrl = environment.apiUrl + 'account/';
 
   currentUser: UserType | null = this.getUserFromLocalStorage();
@@ -42,6 +44,10 @@ export class AuthService {
   logout(): void {
     localStorage.removeItem('user');
     this.currentUser = null;
+
+    if (this.router.url.startsWith('/admin')) {
+      this.router.navigate(['/not-found']);
+    }
   }
 
   isAdmin(): boolean {

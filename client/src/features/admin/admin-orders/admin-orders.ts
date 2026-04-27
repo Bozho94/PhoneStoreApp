@@ -3,10 +3,11 @@ import { DatePipe } from '@angular/common';
 import { OrderService } from '../../../core/services/order-service';
 import { ToastService } from '../../../core/services/toast-service';
 import { OrderType } from '../../../types/OrderType';
+import { DataViewModule } from 'primeng/dataview';
 
 @Component({
   selector: 'app-admin-orders',
-  imports: [DatePipe],
+  imports: [DatePipe, DataViewModule],
   templateUrl: './admin-orders.html',
   styleUrl: './admin-orders.css',
 })

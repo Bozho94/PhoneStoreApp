@@ -27,9 +27,9 @@
         </div>
       </ng-template>
 
-      <ng-template #list let-items>
+      <ng-template #list let-pagePhones>
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          @for (phone of items; track phone.id) {
+          @for (phone of pagePhones; track phone.id) {
             <article class="card bg-base-100 shadow-xl">
               <figure class="relative h-64 overflow-hidden rounded-t-2xl bg-base-100">
                 <div

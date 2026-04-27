@@ -1,17 +1,14 @@
 import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
 import { AuthService } from '../services/auth-service';
-import { ToastService } from '../services/toast-service';
 
 export const adminGuard: CanActivateFn = () => {
   const authService = inject(AuthService);
-  const toastService = inject(ToastService);
   const router = inject(Router);
 
   if (authService.isAdmin()) {
     return true;
   }
 
-  toastService.error('Admin access only.');
-  return router.createUrlTree(['/phones']);
+  return router.createUrlTree(['/not-found']);
 };

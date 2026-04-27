@@ -11,51 +11,55 @@
       </a>
     </div>
 
-    <div class="overflow-x-auto rounded-3xl bg-base-100 shadow-sm">
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Phone</th>
-            <th>Year</th>
-            <th>Price</th>
-            <th>Stock</th>
-            <th class="text-right">Actions</th>
-          </tr>
-        </thead>
+    <p-dataview [value]="phones" [paginator]="true" [rows]="8">
+      <ng-template #list let-pagePhones>
+        <div class="overflow-x-auto rounded-3xl bg-base-100 shadow-sm">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Phone</th>
+                <th>Year</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th class="text-right">Actions</th>
+              </tr>
+            </thead>
 
-        <tbody>
-          @for (phone of phones; track phone.id) {
-            <tr>
-              <td>
-                <div class="flex items-center gap-3">
-                  <img
-                    [src]="phone.mainImageUrl"
-                    [alt]="phone.brand + ' ' + phone.model"
-                    class="h-14 w-14 rounded-xl bg-base-200 object-contain"
-                  />
+            <tbody>
+              @for (phone of pagePhones; track phone.id) {
+                <tr>
+                  <td>
+                    <div class="flex items-center gap-3">
+                      <img
+                        [src]="phone.mainImageUrl"
+                        [alt]="phone.brand + ' ' + phone.model"
+                        class="h-14 w-14 rounded-xl bg-base-200 object-contain"
+                      />
 
-                  <div>
-                    <p class="font-semibold">{{ phone.brand }}</p>
-                    <p class="text-sm text-base-content/70">{{ phone.model }}</p>
-                  </div>
-                </div>
-              </td>
-              <td>{{ phone.releaseYear }}</td>
-              <td>${{ phone.price }}</td>
-              <td>{{ phone.stockQuantity }}</td>
-              <td class="text-right">
-                <a [routerLink]="['/admin/phones', phone.id, 'edit']" class="btn btn-outline btn-sm mr-2">
-                  Edit
-                </a>
+                      <div>
+                        <p class="font-semibold">{{ phone.brand }}</p>
+                        <p class="text-sm text-base-content/70">{{ phone.model }}</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>{{ phone.releaseYear }}</td>
+                  <td>${{ phone.price }}</td>
+                  <td>{{ phone.stockQuantity }}</td>
+                  <td class="text-right">
+                    <a [routerLink]="['/admin/phones', phone.id, 'edit']" class="btn btn-outline btn-sm mr-2">
+                      Edit
+                    </a>
 
-                <button type="button" class="btn btn-error btn-sm" (click)="deletePhone(phone.id)">
-                  Delete
-                </button>
-              </td>
-            </tr>
-          }
-        </tbody>
-      </table>
-    </div>
+                    <button type="button" class="btn btn-error btn-sm" (click)="deletePhone(phone.id)">
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </ng-template>
+    </p-dataview>
   </div>
 </section>

@@ -3,10 +3,11 @@ import { RouterLink } from '@angular/router';
 import { PhoneService } from '../../../core/services/phone-service';
 import { ToastService } from '../../../core/services/toast-service';
 import { PhoneListItemType } from '../../../types/PhoneListItemType';
+import { DataViewModule } from 'primeng/dataview';
 
 @Component({
   selector: 'app-admin-phones',
-  imports: [RouterLink],
+  imports: [RouterLink, DataViewModule],
   templateUrl: './admin-phones.html',
   styleUrl: './admin-phones.css',
 })

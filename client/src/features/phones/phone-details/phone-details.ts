@@ -3,6 +3,8 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { PhoneService } from '../../../core/services/phone-service';
 import { PhoneDetailsType } from '../../../types/PhoneDetailsType';
 import { CartService } from '../../../core/services/cart-service';
+import { ToastService } from '../../../core/services/toast-service';
+import { AuthService } from '../../../core/services/auth-service';
 
 @Component({
   selector: 'app-phone-details',
@@ -13,50 +15,47 @@ import { CartService } from '../../../core/services/cart-service';
 export class PhoneDetails implements OnInit {
   private phoneService = inject(PhoneService);
   private route = inject(ActivatedRoute);
-  private cartService = inject(CartService)
+  private cartService = inject(CartService);
+  private toastService = inject(ToastService);
+  private authService = inject(AuthService);
 
   phone?: PhoneDetailsType;
   selectedImageUrl = '';
-  stars = [1, 2, 3, 4, 5];
 
   get isLoggedIn(): boolean {
-    return localStorage.getItem('user') !== null;
+    return this.authService.currentUser !== null;
   }
 
   ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-
-    this.phoneService.getPhone(id).subscribe({
-      next: (phone) => {
-        this.phone = phone;
-
-        const mainImage = phone.images.find((image) => image.isMain);
-        this.selectedImageUrl = mainImage?.imageUrl ?? phone.images[0]?.imageUrl ?? '';
-      },
-    });
+    this.loadPhone();
   }
 
   selectImage(imageUrl: string): void {
     this.selectedImageUrl = imageUrl;
   }
 
-  ratePhone(rating: number): void {
-    if (!this.phone || !this.isLoggedIn) return;
+  addToCart(): void {
+    if (!this.phone) return;
 
-    this.phoneService.ratePhone(this.phone.id, rating).subscribe({
-      next: (result) => {
-        this.phone = {
-          ...this.phone!,
-          averageRating: result.averageRating,
-          ratingsCount: result.ratingsCount,
-        };
-      },
+    this.cartService.addToCart(this.phone);
+  }
+
+  private loadPhone(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+
+    this.phoneService.getPhone(id).subscribe({
+      next: (phone) => this.setPhone(phone),
+      error: () => this.toastService.error('Could not load phone.'),
     });
   }
 
-  addToCart(): void {
-    if(!this.phone) return
+  private setPhone(phone: PhoneDetailsType): void {
+    this.phone = phone;
+    this.selectedImageUrl = this.getSelectedImageUrl(phone);
+  }
 
-    this.cartService.addToCart(this.phone);
+  private getSelectedImageUrl(phone: PhoneDetailsType): string {
+    const mainImage = phone.images.find((image) => image.isMain);
+    return mainImage?.imageUrl ?? phone.images[0]?.imageUrl ?? '';
   }
 }

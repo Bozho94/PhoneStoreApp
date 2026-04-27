@@ -44,6 +44,10 @@ export class AuthService {
     this.currentUser = null;
   }
 
+  isAdmin(): boolean {
+    return this.currentUser?.roles?.includes('Admin') === true;
+  }
+
   private setCurrentUser(user: UserType): void {
     localStorage.setItem('user', JSON.stringify(user));
     this.currentUser = user;

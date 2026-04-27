@@ -33,18 +33,12 @@
         [(ngModel)]="registerData.password"
       />
 
-      @if (errorMessage) {
-        <p class="text-sm text-error">
-          {{ errorMessage }}
-        </p>
-      }
-
       <button type="submit" class="btn btn-primary w-full">
         Register
       </button>
     </form>
 
-    <a routerLink="/phones" class="btn btn-ghost mt-4 w-full">
+    <a routerLink="/phones" class="btn btn-outline mt-4 w-full rounded-full">
       Back to phones
     </a>
   </div>

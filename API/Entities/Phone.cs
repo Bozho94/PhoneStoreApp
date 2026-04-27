@@ -35,7 +35,4 @@ public class Phone
 
     public List<PhoneImage> Images { get; set; } = [];
     public List<OrderItem> OrderItems { get; set; } = [];
-
-    public List<PhoneRating> PhoneRatings { get; set; } = [];
-
 }

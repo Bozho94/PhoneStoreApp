@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../../core/services/auth-service';
 import { RegisterType } from '../../../types/RegisterType';
+import { ToastService } from '../../../core/services/toast-service';
 
 @Component({
   selector: 'app-register',
@@ -12,6 +13,7 @@ import { RegisterType } from '../../../types/RegisterType';
 })
 export class Register {
   private authService = inject(AuthService);
+  private toastService = inject(ToastService);
   private router = inject(Router);
 
   registerData: RegisterType = {
@@ -20,17 +22,14 @@ export class Register {
     password: '',
   };
 
-  errorMessage = '';
-
   register(): void {
-    this.errorMessage = '';
-
     this.authService.register(this.registerData).subscribe({
       next: () => {
+        this.toastService.success('Registration successful.');
         this.router.navigateByUrl('/phones');
       },
       error: () => {
-        this.errorMessage = 'Registration failed';
+        this.toastService.error('Registration failed.');
       },
     });
   }

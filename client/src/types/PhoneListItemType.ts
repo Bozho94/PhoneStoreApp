@@ -6,7 +6,4 @@ export type PhoneListItemType = {
     price: number;
     stockQuantity: number;
     mainImageUrl: string;
-    ratingsCount: number;
-    averageRating: number;
-
 }

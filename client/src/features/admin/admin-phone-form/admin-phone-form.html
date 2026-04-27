@@ -1,0 +1,119 @@
+<section class="min-h-screen bg-base-200 px-6 py-10">
+  <div class="mx-auto max-w-3xl rounded-3xl bg-base-100 p-8 shadow-sm">
+    <a routerLink="/admin/phones" class="btn btn-outline btn-sm mb-6 rounded-full">
+      Back to admin phones
+    </a>
+
+    <p class="text-sm font-semibold uppercase tracking-[0.25em] text-primary">Admin</p>
+    <h1 class="mt-2 text-4xl font-bold">
+      {{ isEditMode ? 'Edit phone' : 'Create phone' }}
+    </h1>
+
+    <form class="mt-8 space-y-4" (ngSubmit)="savePhone()">
+      <div class="grid gap-4 md:grid-cols-2">
+        <label class="form-control w-full">
+          <span class="label-text mb-1">Brand</span>
+          <input class="input input-bordered w-full" name="brand" placeholder="Apple" [(ngModel)]="phone.brand" />
+        </label>
+
+        <label class="form-control w-full">
+          <span class="label-text mb-1">Model</span>
+          <input class="input input-bordered w-full" name="model" placeholder="iPhone 16" [(ngModel)]="phone.model" />
+        </label>
+
+        <label class="form-control w-full">
+          <span class="label-text mb-1">Release year</span>
+          <input
+            class="input input-bordered w-full"
+            name="releaseYear"
+            type="number"
+            placeholder="2026"
+            [(ngModel)]="phone.releaseYear"
+          />
+        </label>
+
+        <label class="form-control w-full">
+          <span class="label-text mb-1">Price</span>
+          <input
+            class="input input-bordered w-full"
+            name="price"
+            type="number"
+            placeholder="999"
+            [(ngModel)]="phone.price"
+          />
+        </label>
+
+        <label class="form-control w-full">
+          <span class="label-text mb-1">Stock quantity</span>
+          <input
+            class="input input-bordered w-full"
+            name="stockQuantity"
+            type="number"
+            placeholder="10"
+            [(ngModel)]="phone.stockQuantity"
+          />
+        </label>
+      </div>
+
+      <label class="form-control w-full">
+        <span class="label-text mb-1">Description</span>
+        <textarea
+          class="textarea textarea-bordered min-h-28 w-full"
+          name="description"
+          placeholder="Short phone description"
+          [(ngModel)]="phone.description"
+        ></textarea>
+      </label>
+
+      <label class="form-control w-full">
+        <span class="label-text mb-1">Images</span>
+        <input
+          type="file"
+          class="file-input file-input-bordered w-full"
+          accept="image/*"
+          multiple
+          [disabled]="isUploading"
+          (change)="uploadImages($event)"
+        />
+        <span class="mt-2 text-sm text-base-content/60">
+          Upload images from your computer. The main image is shown first.
+        </span>
+      </label>
+
+      @if (isUploading) {
+        <div class="flex items-center gap-2 text-sm text-base-content/70">
+          <span class="loading loading-spinner loading-sm"></span>
+          <span>Uploading images...</span>
+        </div>
+      }
+
+      @if (uploadedImages.length > 0) {
+        <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+          @for (image of uploadedImages; track image.imageUrl; let index = $index) {
+            <div class="rounded-2xl border border-base-300 p-3">
+              <img [src]="image.imageUrl" alt="Uploaded phone" class="h-32 w-full rounded-xl object-contain" />
+
+              @if (image.isMain) {
+                <div class="badge badge-primary mt-3">Main image</div>
+              }
+
+              <div class="mt-3 flex gap-2">
+                <button type="button" class="btn btn-outline btn-xs" (click)="setMainImage(index)">
+                  Set main
+                </button>
+
+                <button type="button" class="btn btn-error btn-xs" (click)="removeImage(index)">
+                  Remove
+                </button>
+              </div>
+            </div>
+          }
+        </div>
+      }
+
+      <button type="submit" class="btn btn-primary w-full" [disabled]="isUploading">
+        {{ isEditMode ? 'Save changes' : 'Create phone' }}
+      </button>
+    </form>
+  </div>
+</section>

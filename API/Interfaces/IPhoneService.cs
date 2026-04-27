@@ -4,7 +4,9 @@ namespace API.Interfaces;
 
 public interface IPhoneService
 {
-    Task<IEnumerable<PhoneListItemDto>> GetPhonesAsync();
+    Task<List<PhoneListDto>> GetPhonesAsync();
     Task<PhoneDetailsDto?> GetPhoneByIdAsync(int id);
-    Task<PhoneRatingResultDto?> AddOrUpdateRatingAsync(int phoneId, string userId, int rating);
+    Task<PhoneDetailsDto> CreatePhoneAsync(PhoneFormDto phoneDto);
+    Task<PhoneDetailsDto?> UpdatePhoneAsync(int id, PhoneFormDto phoneDto);
+    Task<bool> DeletePhoneAsync(int id);
 }

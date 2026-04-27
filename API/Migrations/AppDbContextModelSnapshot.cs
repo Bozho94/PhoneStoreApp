@@ -250,34 +250,6 @@ namespace API.Migrations
                     b.ToTable("PhoneImages");
                 });
 
-            modelBuilder.Entity("API.Entities.PhoneRating", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("PhoneId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("Rating")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.HasIndex("PhoneId", "UserId")
-                        .IsUnique();
-
-                    b.ToTable("PhoneRatings");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -451,25 +423,6 @@ namespace API.Migrations
                     b.Navigation("Phone");
                 });
 
-            modelBuilder.Entity("API.Entities.PhoneRating", b =>
-                {
-                    b.HasOne("API.Entities.Phone", "Phone")
-                        .WithMany("PhoneRatings")
-                        .HasForeignKey("PhoneId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("API.Entities.AppUser", "User")
-                        .WithMany("PhoneRatings")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Phone");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -524,8 +477,6 @@ namespace API.Migrations
             modelBuilder.Entity("API.Entities.AppUser", b =>
                 {
                     b.Navigation("Orders");
-
-                    b.Navigation("PhoneRatings");
                 });
 
             modelBuilder.Entity("API.Entities.Order", b =>
@@ -538,8 +489,6 @@ namespace API.Migrations
                     b.Navigation("Images");
 
                     b.Navigation("OrderItems");
-
-                    b.Navigation("PhoneRatings");
                 });
 #pragma warning restore 612, 618
         }

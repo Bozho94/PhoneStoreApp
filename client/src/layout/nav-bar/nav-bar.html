@@ -1,8 +1,6 @@
-<nav class="navbar bg-base-100 px-6 shadow-sm">
+<nav class="navbar sticky top-0 z-50 bg-base-100 px-6 shadow-sm">
   <div class="navbar-start">
-    <a routerLink="/phones" class="btn btn-ghost text-xl font-bold">
-      PhoneStoreApp
-    </a>
+    <a routerLink="/phones" class="btn btn-ghost text-xl font-bold"> PhoneStoreApp </a>
   </div>
 
   <div class="navbar-end">
@@ -24,30 +22,46 @@
           [(ngModel)]="loginData.password"
         />
 
-        <button type="submit" class="btn btn-primary btn-sm">
-          Login
-        </button>
+        <button type="submit" class="btn btn-primary btn-sm">Login</button>
 
-        <a routerLink="/register" class="btn btn-outline btn-sm">
-          Register
-        </a>
+        <a routerLink="/register" class="btn btn-outline btn-sm"> Register </a>
       </form>
     } @else {
+      @if (authService.isAdmin()) {
+        <a routerLink="/admin/phones" class="btn btn-ghost btn-sm mr-2">Admin phones</a>
+        <a routerLink="/admin/orders" class="btn btn-ghost btn-sm mr-2">Admin orders</a>
+      }
+
+      <a
+        routerLink="/cart"
+        class="btn btn-ghost btn-circle mr-2 transition duration-200 hover:-translate-y-0.5"
+        [class.text-secondary]="hasCartItems()"
+        [class.scale-110]="hasCartItems()"
+        [class.animate-pulse]="hasCartItems()"
+        aria-label="Open cart"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.8"
+          stroke="currentColor"
+          class="h-6 w-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12A1.125 1.125 0 0 1 19.75 21H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 6.75h12.974a1.125 1.125 0 0 1 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+          />
+        </svg>
+      </a>
       <div class="flex items-center gap-3">
         <span class="hidden text-sm text-base-content/70 sm:inline">
           Hello, {{ authService.currentUser.fullName }}
         </span>
 
-        <button type="button" class="btn btn-outline btn-sm" (click)="logout()">
-          Logout
-        </button>
+        <button type="button" class="btn btn-outline btn-sm" (click)="logout()">Logout</button>
       </div>
     }
   </div>
 </nav>
-
-@if (errorMessage) {
-  <div class="bg-error px-6 py-2 text-sm text-error-content">
-    {{ errorMessage }}
-  </div>
-}

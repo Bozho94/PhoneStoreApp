@@ -10,6 +10,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
+var allowedOrigins = builder.Configuration
+    .GetSection("Cors:AllowedOrigins")
+    .Get<string[]>()
+    ?? ["http://localhost:4200", "https://localhost:4200"];
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -20,6 +24,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddCors();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IPhoneService, PhoneService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<IPhotoService, PhotoService>();
 
 builder.Services.AddIdentityCore<AppUser>(options =>
 {
@@ -68,7 +74,7 @@ app.UseMiddleware<ExceptionMiddleware>();
 app.UseCors(policy => policy
     .AllowAnyHeader()
     .AllowAnyMethod()
-    .WithOrigins("http://localhost:4200", "https://localhost:4200"));
+    .WithOrigins(allowedOrigins));
 
 app.UseAuthentication();
 app.UseAuthorization();

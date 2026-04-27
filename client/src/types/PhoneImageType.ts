@@ -1,5 +1,6 @@
 export type PhoneImageType = {
-    id: number;
-    imageUrl: string;
-    isMain: boolean;
-}
+  id: number;
+  imageUrl: string;
+  publicId?: string;
+  isMain: boolean;
+};

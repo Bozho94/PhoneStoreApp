@@ -5,6 +5,7 @@ node_modules/
 .angular/
 dist/
 coverage/
+temp-build/
 *.log
 *.user
 *.suo

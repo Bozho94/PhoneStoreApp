@@ -9,6 +9,4 @@ export type PhoneDetailsType = {
     description: string;
     stockQuantity: number;
     images: PhoneImageType[];
-    ratingsCount: number;
-    averageRating: number;
 }

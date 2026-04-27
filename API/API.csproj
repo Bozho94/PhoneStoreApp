@@ -18,23 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Data\" />
-    <Folder Include="DTOs\" />
-    <Folder Include="Entities\" />
-    <Folder Include="Enums\" />
-    <Folder Include="Errors\" />
-    <Folder Include="Extensions\" />
-    <Folder Include="Helpers\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="Middleware\" />
-    <Folder Include="Services\" />
+    <Content Update="SeedData\phones.seed.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
-
-  <ItemGroup>
-  <Content Update="SeedData\phones.seed.json">
-    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-  </Content>
-</ItemGroup>
 
 </Project>

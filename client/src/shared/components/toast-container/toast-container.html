@@ -1,0 +1,15 @@
+<div class="toast toast-bottom toast-end z-100">
+  @for (message of toastService.messages; track message.id) {
+    <div
+      class="alert shadow-lg"
+      [class.alert-success]="message.type === 'success'"
+      [class.alert-error]="message.type === 'error'"
+    >
+      <span>{{ message.text }}</span>
+
+      <button type="button" class="btn btn-ghost btn-xs" (click)="toastService.remove(message.id)">
+        x
+      </button>
+    </div>
+  }
+</div>

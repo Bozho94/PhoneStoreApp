@@ -10,8 +10,6 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
 
     public DbSet<PhoneImage> PhoneImages { get; set; }
 
-    public DbSet<PhoneRating> PhoneRatings { get; set; }
-
     public DbSet<Order> Orders { get; set; }
 
     public DbSet<OrderItem> OrderItems { get; set; }

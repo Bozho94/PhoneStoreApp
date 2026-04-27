@@ -10,12 +10,5 @@ public class PhoneDetailsDto
     public string Description { get; set; } = string.Empty;
     public int StockQuantity { get; set; }
     public List<PhoneImageDto> Images { get; set; } = [];
-    public int RatingsCount { get; set; }
-    public double AverageRating { get; set; }
-
-
-
-
-
 
 }

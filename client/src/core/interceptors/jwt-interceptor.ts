@@ -1,6 +1,10 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 
 export const jwtInterceptor: HttpInterceptorFn = (request, next) => {
+  if (isPublicPhoneGetRequest(request.method, request.url)) {
+    return next(request);
+  }
+
   const token = getToken();
 
   if (!token) {
@@ -15,6 +19,10 @@ export const jwtInterceptor: HttpInterceptorFn = (request, next) => {
 
   return next(authRequest);
 };
+
+function isPublicPhoneGetRequest(method: string, url: string): boolean {
+  return method === 'GET' && url.includes('/api/phones');
+}
 
 function getToken(): string | null {
   if (typeof localStorage === 'undefined') return null;

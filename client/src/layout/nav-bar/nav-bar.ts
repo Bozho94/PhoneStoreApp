@@ -3,6 +3,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { AuthService } from '../../core/services/auth-service';
 import { LoginType } from '../../types/LoginType';
+import { CartService } from '../../core/services/cart-service';
+import { ToastService } from '../../core/services/toast-service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -12,28 +14,33 @@ import { LoginType } from '../../types/LoginType';
 })
 export class NavBar {
   authService = inject(AuthService);
+  cartService = inject(CartService);
+  private toastService = inject(ToastService);
 
   loginData: LoginType = {
     email: '',
     password: '',
   };
 
-  errorMessage = '';
-
   login(): void {
-    this.errorMessage = '';
-
     this.authService.login(this.loginData).subscribe({
       next: () => {
         this.loginData.password = '';
+        this.toastService.success('Login successful.');
       },
       error: () => {
-        this.errorMessage = 'Invalid email or password';
+        this.loginData.password = '';
+        this.toastService.error('Invalid email or password.');
       },
     });
   }
 
   logout(): void {
     this.authService.logout();
+    this.toastService.success('Logout successful.');
+  }
+
+  hasCartItems(): boolean {
+    return this.cartService.cartItems.length > 0;
   }
 }

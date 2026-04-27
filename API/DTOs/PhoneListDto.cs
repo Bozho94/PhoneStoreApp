@@ -1,6 +1,6 @@
 namespace API.DTOs;
 
-public class PhoneListItemDto
+public class PhoneListDto
 {
     public int Id { get; set; }
 
@@ -15,11 +15,4 @@ public class PhoneListItemDto
     public int StockQuantity { get; set; }
 
     public string MainImageUrl { get; set; } = string.Empty;
-
-    public int RatingsCount { get; set; }
-
-    public double AverageRating { get; set; }
-
-
-
 }

@@ -21,7 +21,11 @@ export const jwtInterceptor: HttpInterceptorFn = (request, next) => {
 };
 
 function isPublicPhoneGetRequest(method: string, url: string): boolean {
-  return method === 'GET' && url.includes('/api/phones');
+  if (method !== 'GET') return false;
+
+  const cleanUrl = url.split('?')[0];
+
+  return /\/api\/phones(\/\d+)?$/.test(cleanUrl);
 }
 
 function getToken(): string | null {

@@ -22,7 +22,7 @@ export class AdminPhones implements OnInit {
   }
 
   loadPhones(): void {
-    this.phoneService.getPhones().subscribe({
+    this.phoneService.getAdminPhones().subscribe({
       next: (phones) => (this.phones = phones),
       error: () => this.toastService.error('Could not load phones.'),
     });

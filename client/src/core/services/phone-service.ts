@@ -17,6 +17,10 @@ export class PhoneService {
     return this.http.get<PhoneListItemType[]>(this.baseUrl);
   }
 
+  getAdminPhones() {
+    return this.http.get<PhoneListItemType[]>(this.baseUrl + 'admin');
+  }
+
   getPhone(id: number) {
     return this.http.get<PhoneDetailsType>(this.baseUrl + id);
   }

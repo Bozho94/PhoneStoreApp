@@ -10,25 +10,12 @@ public class PhoneService(AppDbContext context) : IPhoneService
 {
     public async Task<List<PhoneListDto>> GetPhonesAsync()
     {
-        return await context.Phones
-            .AsNoTracking()
-            .OrderBy(phone => phone.Price)
-            .ThenBy(phone => phone.Brand)
-            .ThenBy(phone => phone.Model)
-            .Select(p => new PhoneListDto
-            {
-                Id = p.Id,
-                Brand = p.Brand,
-                Model = p.Model,
-                ReleaseYear = p.ReleaseYear,
-                Price = p.Price,
-                StockQuantity = p.StockQuantity,
-                MainImageUrl = p.Images
-                    .Where(i => i.IsMain)
-                    .Select(i => i.ImageUrl)
-                    .FirstOrDefault() ?? string.Empty
-            })
-            .ToListAsync();
+        return await BuildPhoneListQuery().ToListAsync();
+    }
+
+    public async Task<List<PhoneListDto>> GetAdminPhonesAsync()
+    {
+        return await BuildPhoneListQuery().ToListAsync();
     }
 
     public async Task<PhoneDetailsDto?> GetPhoneByIdAsync(int id)
@@ -158,5 +145,27 @@ public class PhoneService(AppDbContext context) : IPhoneService
         }
 
         return images;
+    }
+
+    private IQueryable<PhoneListDto> BuildPhoneListQuery()
+    {
+        return context.Phones
+            .AsNoTracking()
+            .OrderBy(phone => phone.Price)
+            .ThenBy(phone => phone.Brand)
+            .ThenBy(phone => phone.Model)
+            .Select(p => new PhoneListDto
+            {
+                Id = p.Id,
+                Brand = p.Brand,
+                Model = p.Model,
+                ReleaseYear = p.ReleaseYear,
+                Price = p.Price,
+                StockQuantity = p.StockQuantity,
+                MainImageUrl = p.Images
+                    .Where(i => i.IsMain)
+                    .Select(i => i.ImageUrl)
+                    .FirstOrDefault() ?? string.Empty
+            });
     }
 }

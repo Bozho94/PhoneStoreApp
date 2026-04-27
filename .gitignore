@@ -6,6 +6,7 @@ node_modules/
 dist/
 coverage/
 temp-build/
+temp-api-build/
 *.log
 *.user
 *.suo

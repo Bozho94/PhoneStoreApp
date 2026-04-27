@@ -1,5 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { PhoneService } from '../../../core/services/phone-service';
 import { PhoneDetailsType } from '../../../types/PhoneDetailsType';
 import { CartService } from '../../../core/services/cart-service';
@@ -15,6 +15,7 @@ import { AuthService } from '../../../core/services/auth-service';
 export class PhoneDetails implements OnInit {
   private phoneService = inject(PhoneService);
   private route = inject(ActivatedRoute);
+  private router = inject(Router);
   private cartService = inject(CartService);
   private toastService = inject(ToastService);
   private authService = inject(AuthService);
@@ -41,7 +42,12 @@ export class PhoneDetails implements OnInit {
   }
 
   private loadPhone(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
+    const id = this.getPhoneId();
+
+    if (id === null) {
+      this.router.navigateByUrl('/not-found');
+      return;
+    }
 
     this.phoneService.getPhone(id).subscribe({
       next: (phone) => this.setPhone(phone),
@@ -57,5 +63,15 @@ export class PhoneDetails implements OnInit {
   private getSelectedImageUrl(phone: PhoneDetailsType): string {
     const mainImage = phone.images.find((image) => image.isMain);
     return mainImage?.imageUrl ?? phone.images[0]?.imageUrl ?? '';
+  }
+
+  private getPhoneId(): number | null {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+
+    if (!Number.isInteger(id) || id <= 0) {
+      return null;
+    }
+
+    return id;
   }
 }

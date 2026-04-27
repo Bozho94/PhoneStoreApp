@@ -12,13 +12,14 @@ import { PhotoUploadResultType } from '../../types/PhotoUploadResultType';
 export class PhoneService {
   private http = inject(HttpClient);
   private baseUrl = environment.apiUrl + 'phones/';
+  private adminPhonesUrl = environment.apiUrl + 'admin/phones';
 
   getPhones() {
     return this.http.get<PhoneListItemType[]>(this.baseUrl);
   }
 
   getAdminPhones() {
-    return this.http.get<PhoneListItemType[]>(this.baseUrl + 'admin');
+    return this.http.get<PhoneListItemType[]>(this.adminPhonesUrl);
   }
 
   getPhone(id: number) {

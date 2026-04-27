@@ -1,7 +1,8 @@
 import { HttpInterceptorFn } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 
 export const jwtInterceptor: HttpInterceptorFn = (request, next) => {
-  if (isPublicPhoneGetRequest(request.method, request.url)) {
+  if (!isApiRequest(request.url)) {
     return next(request);
   }
 
@@ -20,12 +21,8 @@ export const jwtInterceptor: HttpInterceptorFn = (request, next) => {
   return next(authRequest);
 };
 
-function isPublicPhoneGetRequest(method: string, url: string): boolean {
-  if (method !== 'GET') return false;
-
-  const cleanUrl = url.split('?')[0];
-
-  return /\/api\/phones(\/\d+)?$/.test(cleanUrl);
+function isApiRequest(url: string): boolean {
+  return url.startsWith(environment.apiUrl);
 }
 
 function getToken(): string | null {

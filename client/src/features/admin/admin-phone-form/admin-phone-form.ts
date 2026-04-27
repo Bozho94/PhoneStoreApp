@@ -39,7 +39,11 @@ export class AdminPhoneForm implements OnInit {
   }
 
   ngOnInit(): void {
-    this.phoneId = Number(this.route.snapshot.paramMap.get('id'));
+    const phoneId = this.getPhoneId();
+
+    if (phoneId === null) return;
+
+    this.phoneId = phoneId;
 
     if (!this.isEditMode) return;
 
@@ -185,5 +189,22 @@ export class AdminPhoneForm implements OnInit {
     if (!hasMainImage) {
       this.uploadedImages[0].isMain = true;
     }
+  }
+
+  private getPhoneId(): number | null {
+    const idParam = this.route.snapshot.paramMap.get('id');
+
+    if (idParam === null) {
+      return 0;
+    }
+
+    const id = Number(idParam);
+
+    if (!Number.isInteger(id) || id <= 0) {
+      this.router.navigateByUrl('/not-found');
+      return null;
+    }
+
+    return id;
   }
 }

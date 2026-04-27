@@ -15,7 +15,7 @@ namespace API.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        [HttpGet("admin")]
+        [HttpGet("/api/admin/phones")]
         public async Task<ActionResult<List<PhoneListDto>>> GetAdminPhones()
         {
             var phones = await phoneService.GetAdminPhonesAsync();

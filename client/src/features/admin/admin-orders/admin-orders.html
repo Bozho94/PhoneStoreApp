@@ -1,13 +1,13 @@
-<section class="min-h-screen bg-base-200 px-6 py-10">
+<section class="min-h-screen bg-base-200 px-4 py-8 sm:px-6 sm:py-10">
   <div class="mx-auto max-w-6xl">
     <p class="text-sm font-semibold uppercase tracking-[0.25em] text-primary">Admin</p>
-    <h1 class="mt-2 text-4xl font-bold">All orders</h1>
+    <h1 class="mt-2 text-3xl font-bold sm:text-4xl">All orders</h1>
 
     <p-dataview [value]="orders" [paginator]="true" [rows]="8">
       <ng-template #list let-pageOrders>
         <div class="mt-8 space-y-5">
           @for (order of pageOrders; track order.id) {
-            <article class="rounded-3xl bg-base-100 p-6 shadow-sm">
+            <article class="rounded-3xl bg-base-100 p-4 shadow-sm sm:p-6">
               <div class="flex flex-wrap items-center justify-between gap-4">
                 <div>
                   <h2 class="text-xl font-bold">Order #{{ order.id }}</h2>
@@ -16,9 +16,9 @@
                   </p>
                 </div>
 
-                <div class="flex items-center gap-2">
+                <div class="flex w-full flex-col items-stretch gap-2 sm:w-auto sm:flex-row sm:items-center">
                   <span
-                    class="badge"
+                    class="badge self-start sm:self-auto"
                     [class.badge-warning]="order.status === 'Pending'"
                     [class.badge-success]="order.status === 'Approved'"
                     [class.badge-error]="order.status === 'Canceled'"
@@ -27,7 +27,7 @@
                   </span>
 
                   <button
-                    class="btn btn-success btn-sm"
+                    class="btn btn-success btn-sm w-full sm:w-auto"
                     [disabled]="order.status === 'Approved'"
                     (click)="approveOrder(order)"
                   >
@@ -35,7 +35,7 @@
                   </button>
 
                   <button
-                    class="btn btn-error btn-sm"
+                    class="btn btn-error btn-sm w-full sm:w-auto"
                     [disabled]="order.status === 'Canceled'"
                     (click)="cancelOrder(order)"
                   >
@@ -68,7 +68,7 @@
 
               <div class="mt-5 grid gap-3 md:grid-cols-2">
                 @for (item of order.items; track item.phoneId) {
-                  <div class="flex items-center gap-3 rounded-2xl bg-base-200/60 p-3">
+                  <div class="flex flex-col items-start gap-3 rounded-2xl bg-base-200/60 p-3 sm:flex-row sm:items-center">
                     <img
                       [src]="item.imageUrl"
                       [alt]="item.brand + ' ' + item.model"
@@ -83,7 +83,7 @@
                 }
               </div>
 
-              <div class="mt-5 text-right text-xl font-bold">
+              <div class="mt-5 text-left text-xl font-bold sm:text-right">
                 Total: ${{ order.totalPrice }}
               </div>
             </article>

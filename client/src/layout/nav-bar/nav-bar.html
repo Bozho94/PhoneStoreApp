@@ -1,16 +1,16 @@
-<nav class="navbar sticky top-0 z-50 bg-base-100 px-6 shadow-sm">
-  <div class="navbar-start">
-    <a routerLink="/phones" class="btn btn-ghost text-xl font-bold"> PhoneStoreApp </a>
+<nav class="navbar sticky top-0 z-50 flex-col items-stretch gap-3 bg-base-100 px-4 py-3 shadow-sm sm:flex-row sm:items-center sm:justify-between sm:px-6">
+  <div class="navbar-start w-full sm:w-auto">
+    <a routerLink="/phones" class="btn btn-ghost px-0 text-xl font-bold sm:px-4"> PhoneStoreApp </a>
   </div>
 
-  <div class="navbar-end">
+  <div class="navbar-end w-full sm:ml-auto sm:w-auto">
     @if (!authService.currentUser) {
-      <form class="flex items-center gap-2" (ngSubmit)="login()">
+      <form class="flex w-full flex-col gap-2 sm:w-auto sm:flex-row sm:items-center sm:gap-3" (ngSubmit)="login()">
         <input
           type="email"
           name="email"
           placeholder="Email"
-          class="input input-bordered input-sm w-44"
+          class="input input-bordered input-sm w-full sm:w-44"
           [(ngModel)]="loginData.email"
         />
 
@@ -18,49 +18,51 @@
           type="password"
           name="password"
           placeholder="Password"
-          class="input input-bordered input-sm w-36"
+          class="input input-bordered input-sm w-full sm:w-36"
           [(ngModel)]="loginData.password"
         />
 
-        <button type="submit" class="btn btn-primary btn-sm">Login</button>
+        <button type="submit" class="btn btn-primary btn-sm w-full sm:w-auto">Login</button>
 
-        <a routerLink="/register" class="btn btn-outline btn-sm"> Register </a>
+        <a routerLink="/register" class="btn btn-outline btn-sm w-full sm:w-auto"> Register </a>
       </form>
     } @else {
-      @if (authService.isAdmin()) {
-        <a routerLink="/admin/phones" class="btn btn-ghost btn-sm mr-2">Admin phones</a>
-        <a routerLink="/admin/orders" class="btn btn-ghost btn-sm mr-2">Admin orders</a>
-      }
+      <div class="flex w-full flex-col gap-2 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:justify-end sm:gap-3">
+        @if (authService.isAdmin()) {
+          <a routerLink="/admin/phones" class="btn btn-ghost btn-sm w-full sm:w-auto">Admin phones</a>
+          <a routerLink="/admin/orders" class="btn btn-ghost btn-sm w-full sm:w-auto">Admin orders</a>
+        }
 
-      <a
-        routerLink="/cart"
-        class="btn btn-ghost btn-circle mr-2 transition duration-200 hover:-translate-y-0.5"
-        [class.text-secondary]="hasCartItems()"
-        [class.scale-110]="hasCartItems()"
-        [class.animate-pulse]="hasCartItems()"
-        aria-label="Open cart"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.8"
-          stroke="currentColor"
-          class="h-6 w-6"
+        <a
+          routerLink="/cart"
+          class="btn btn-ghost btn-circle self-start transition duration-200 hover:-translate-y-0.5 sm:self-auto"
+          [class.text-secondary]="hasCartItems()"
+          [class.scale-110]="hasCartItems()"
+          [class.animate-pulse]="hasCartItems()"
+          aria-label="Open cart"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12A1.125 1.125 0 0 1 19.75 21H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 6.75h12.974a1.125 1.125 0 0 1 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
-          />
-        </svg>
-      </a>
-      <div class="flex items-center gap-3">
-        <span class="hidden text-sm text-base-content/70 sm:inline">
-          Hello, {{ authService.currentUser.fullName }}
-        </span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.8"
+            stroke="currentColor"
+            class="h-6 w-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12A1.125 1.125 0 0 1 19.75 21H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 6.75h12.974a1.125 1.125 0 0 1 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+            />
+          </svg>
+        </a>
+        <div class="flex w-full flex-col gap-2 sm:w-auto sm:flex-row sm:items-center sm:gap-3">
+          <span class="text-sm text-base-content/70">
+            Hello, {{ authService.currentUser.fullName }}
+          </span>
 
-        <button type="button" class="btn btn-outline btn-sm" (click)="logout()">Logout</button>
+          <button type="button" class="btn btn-outline btn-sm w-full sm:w-auto" (click)="logout()">Logout</button>
+        </div>
       </div>
     }
   </div>

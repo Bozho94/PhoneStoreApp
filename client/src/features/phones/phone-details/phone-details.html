@@ -1,24 +1,24 @@
 @if (phone) {
-  <section class="min-h-screen bg-base-100 px-6 py-10">
+  <section class="min-h-screen bg-base-100 px-4 py-8 sm:px-6 sm:py-10">
     <div class="mx-auto max-w-5xl">
       <a
         routerLink="/phones"
-        class="btn btn-outline btn-sm mb-6 rounded-full px-5 font-medium shadow-sm"
+        class="btn btn-outline btn-sm mb-6 w-full rounded-full px-5 font-medium shadow-sm sm:w-auto"
       >
         <span class="text-lg leading-none">&lt;</span>
         <span>Back to phones</span>
       </a>
 
-      <div class="rounded-4xl border border-base-200 bg-base-100 p-5 shadow-md shadow-base-300/40">
+      <div class="rounded-4xl border border-base-200 bg-base-100 p-4 shadow-md shadow-base-300/40 sm:p-5">
         <figure class="rounded-3xl bg-base-200/60 p-3">
           <img
             [src]="selectedImageUrl"
             [alt]="phone.brand + ' ' + phone.model"
-            class="h-136 w-full rounded-[1.25rem] object-contain"
+            class="h-[18rem] w-full rounded-[1.25rem] object-contain sm:h-[28rem] lg:h-[34rem]"
           />
         </figure>
 
-        <div class="mt-4 grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-5">
+        <div class="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4 md:grid-cols-5">
           @for (image of phone.images; track image.id) {
             <button
               type="button"
@@ -30,7 +30,7 @@
               <img
                 [src]="image.imageUrl"
                 [alt]="phone.brand + ' ' + phone.model"
-                class="h-24 w-full rounded-xl object-contain"
+                class="h-20 w-full rounded-xl object-contain sm:h-24"
               />
             </button>
           }
@@ -38,13 +38,13 @@
       </div>
 
       <div
-        class="mt-8 rounded-4xl border border-base-200 bg-base-100 p-8 shadow-md shadow-base-300/30"
+        class="mt-8 rounded-4xl border border-base-200 bg-base-100 p-5 shadow-md shadow-base-300/30 sm:p-8"
       >
         <p class="text-sm font-semibold uppercase tracking-[0.25em] text-primary">
           {{ phone.brand }}
         </p>
 
-        <h1 class="mt-4 text-4xl font-bold">
+        <h1 class="mt-4 text-3xl font-bold sm:text-4xl">
           {{ phone.model }}
         </h1>
 
@@ -66,11 +66,11 @@
           {{ phone.description }}
         </p>
 
-        <div class="mt-8 flex flex-wrap gap-3">
+        <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           @if (!isLoggedIn) {
             <p class="mt-2 text-sm text-base-content/60">Log in to buy this phone.</p>
           } @else {
-            <button class="btn btn-primary" (click)="addToCart()">Add to cart</button>
+            <button class="btn btn-primary w-full sm:w-auto" (click)="addToCart()">Add to cart</button>
           }
         </div>
       </div>

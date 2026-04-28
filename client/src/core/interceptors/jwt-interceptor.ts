@@ -1,11 +1,6 @@
 import { HttpInterceptorFn } from '@angular/common/http';
-import { environment } from '../../environments/environment';
 
 export const jwtInterceptor: HttpInterceptorFn = (request, next) => {
-  if (!isApiRequest(request.url)) {
-    return next(request);
-  }
-
   const token = getToken();
 
   if (!token) {
@@ -20,10 +15,6 @@ export const jwtInterceptor: HttpInterceptorFn = (request, next) => {
 
   return next(authRequest);
 };
-
-function isApiRequest(url: string): boolean {
-  return url.startsWith(environment.apiUrl);
-}
 
 function getToken(): string | null {
   if (typeof localStorage === 'undefined') return null;

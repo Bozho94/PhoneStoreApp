@@ -9,7 +9,9 @@
         <span>Back to phones</span>
       </a>
 
-      <div class="rounded-4xl border border-base-200 bg-base-100 p-4 shadow-md shadow-base-300/40 sm:p-5">
+      <div
+        class="rounded-4xl border border-base-200 bg-base-100 p-4 shadow-md shadow-base-300/40 sm:p-5"
+      >
         <figure class="rounded-3xl bg-base-200/60 p-3">
           <img
             [src]="selectedImageUrl"
@@ -69,8 +71,10 @@
         <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
           @if (!isLoggedIn) {
             <p class="mt-2 text-sm text-base-content/60">Log in to buy this phone.</p>
-          } @else {
-            <button class="btn btn-primary w-full sm:w-auto" (click)="addToCart()">Add to cart</button>
+          } @else if (phone.stockQuantity > 0) {
+            <button class="btn btn-primary w-full sm:w-auto" (click)="addToCart()">
+              Add to cart
+            </button>
           }
         </div>
       </div>
